@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+@section Styles{
+    <style type="text/css">
+        #map {
+            position: fixed !important;
+            height: 60% !important;
+            width: 35% !important;
+        }
+    </style>
+
+}
+
+
+<div class="d-flex flex-row">
+    <div id="slider">
+        <input type="range" min="1" max="10" value="1" class="custom-range" id="range">
+        <h5><span class="badge badge-primary">Kilometre: <span id="km"></span> km</span></h5>
+    </div>
+
+    <div>
+        <input type="button" class="ml-3 btn btn-raised btn-primary" onclick="initMap()" value="Arama Yap" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div id="map"></div>
+    </div>
+    <div class="col-md-6">
+        <ul id="addressList" class="list-group">
+            <!-- listemizde bulunan adresler bu alana gelecek -->
+        </ul>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/googleMapDistance.js"></script>
+}
+
+
